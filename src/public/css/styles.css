@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #343a40; /* Color de fondo oscuro similar a Bootstrap */
+    color: white;
+    position: fixed; /* Hace que la barra de navegación sea fija */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    top: 0; /* Fija la barra en la parte superior */
+    z-index: 1000; /* Asegura que la barra esté siempre por encima del contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle un poco de profundidad */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 10px;
+}
+
+.project-name {
+    font-size: 1.5em; /* Tamaño del texto del nombre del proyecto */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #495057; /* Color de fondo al pasar el cursor, similar a Bootstrap */
+    color: #ffffff; /* Color del texto al pasar el cursor */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.content {
+    margin-top: 60px; /* Espacio para que el contenido no quede oculto debajo de la navbar fija */
+    padding: 20px;
+}

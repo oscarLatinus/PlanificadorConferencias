@@ -1,0 +1,110 @@
+nav {
+    background-color: #343a40; /* Color de fondo oscuro similar a Bootstrap */
+    color: white;
+    position: fixed; /* Hace que la barra de navegación sea fija */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    top: 0; /* Fija la barra en la parte superior */
+    z-index: 1000; /* Asegura que la barra esté siempre por encima del contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle un poco de profundidad */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio inferior para pantallas más pequeñas */
+}
+
+.logo {
+    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-right: 10px;
+}
+
+.project-name {
+    font-size: 1.5em; /* Tamaño del texto del nombre del proyecto */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    margin-right: 50px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho de la última opción */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+nav ul li.active a {
+    background-color: #495057; /* Color de fondo al estar activo */
+    color: #ffffff; /* Color del texto al estar activo */
+}
+
+nav ul li a:hover {
+    background-color: #4e5d6c; /* Color de fondo al pasar el cursor */
+    color: #ffffff; /* Color del texto al pasar el cursor */
+}
+
+/* Estilo adicional para diferenciar */
+nav ul li.active a:hover {
+    background-color: #495057; /* Mantener el fondo activo al pasar el cursor */
+}
+
+/* Estilos responsivos para la navbar */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-brand {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .project-name {
+        font-size: 1.4em; /* Tamaño del texto del nombre del proyecto */
+        font-weight: bold;
+    }
+    
+    .logo {
+        /* display: none; */
+        height: 30px; /* Ajusta el tamaño del logo según sea necesario */
+        margin-right: 10px;
+    }
+}

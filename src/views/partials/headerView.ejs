@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/globalStyles.css">
+    <link rel="stylesheet" href="/css/headerStyles.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <nav>
+        <div class="navbar-brand">
+            <img src="/images/calendar.png" alt="Logo" class="logo">
+            <span class="project-name">Planificador de Conferencias</span>
+        </div>
+        <ul>
+            <li class="<%= title === 'Inicio' ? 'active' : '' %>"><a href="/home">Inicio</a></li>
+            <li class="<%= title === 'Acerca de nosotros' ? 'active' : '' %>"><a href="/about">Acerca de nosotros</a></li>
+        </ul>
+    </nav>
+    <div class="content-wrapper">
+        <div class="card">

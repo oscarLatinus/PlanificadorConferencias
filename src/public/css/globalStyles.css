@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Color de fondo gris claro */
+}
+
+.content-wrapper {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Añade espaciado alrededor del contenido */
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos el 100% del alto de la ventana */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+.card {
+    background-color: #ffffff; /* Fondo blanco para el card */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    padding: 20px; /* Espaciado interno */
+    max-width: 95%; /* Ancho máximo del card */
+    width: 100%; /* Ocupa el 100% del contenedor */
+    margin: 20px; /* Margen alrededor del card */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+/* Estilos responsivos globales */
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-top: 80px;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 10px;
+    }
+}
