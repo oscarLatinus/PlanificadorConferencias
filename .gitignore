@@ -1,0 +1,18 @@
+# Ignorar directorio node_modules en la raíz del proyecto
+node_modules/
+
+# Ignorar cualquier archivo o directorio que termine con .log
+*.log
+
+# Ignorar archivos de configuración locales
+.env
+
+# Ignorar archivos de compilación o archivos generados
+/build/
+/dist/
+*.exe
+*.o
+
+# Ignorar cualquier archivo dentro de un directorio logs
+/logs/*
+
