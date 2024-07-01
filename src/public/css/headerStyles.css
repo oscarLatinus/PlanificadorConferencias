@@ -64,7 +64,6 @@ nav ul li a:hover {
     color: #ffffff; /* Color del texto al pasar el cursor */
 }
 
-/* Estilo adicional para diferenciar */
 nav ul li.active a:hover {
     background-color: #495057; /* Mantener el fondo activo al pasar el cursor */
 }

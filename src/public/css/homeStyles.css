@@ -7,3 +7,50 @@
     text-align: center; /* Alinear contenido al centro */
 }
 
+/* Estilos para mis tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table th:first-child, table td:first-child {
+    width: 15%;
+}
+
+table th:nth-child(2), table td:nth-child(2) {
+    width: 65%;
+}
+
+table th:last-child, table td:last-child {
+    width: 20%;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+}

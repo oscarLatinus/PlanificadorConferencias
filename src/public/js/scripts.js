@@ -35,7 +35,6 @@ function readFileContent(file) {
 // Función para analizar el contenido del archivo y parsearlo
 function parseFileContent(fileContent) {
     let lines = fileContent.split(/(\d+min)/);
-    console.log(lines);
     lines = lines.filter((line) => line.trim() !== "");
     let count = 0;
     const sesiones = [];
@@ -66,7 +65,7 @@ function organizeSessions(sesiones) {
     let sesionAM = [];
     let sesionPM = [];
 
-    let tiempoActual = 540; // 9:00 AM en minutos
+    let tiempoActual = 540; // 9 AM en minutos
 
     let socialEventFinalizado = false;
 
@@ -82,7 +81,7 @@ function organizeSessions(sesiones) {
 
         // Si son justo las 12 agrego el lunch y me paso a las 13
         if( +tiempoActual===720 ){
-            addLunch(+tiempoActual, sesionAM);
+            addLunch(sesionAM);
             tiempoActual = 780;
         }
 
@@ -93,7 +92,7 @@ function organizeSessions(sesiones) {
                 preEventOrganize(sesiones, idx, +tiempoActual, sesionAM); // Se le manda sesionAM para organizar charlas en la mañana
                 tiempoActual += +duracion; // Se incrementa el tiempo con lo que dure
             }
-            addLunch(+tiempoActual, sesionAM);
+            addLunch(sesionAM);
             tiempoActual = 780;
         }
 
@@ -184,7 +183,6 @@ function preEventOrganize(sesionesParam, idxParam, tiempoActualParam, sesionPara
                 // tiempoActualParam += +duracion; // Se incrementa el tiempo con lo que dure
                 sesionesParam.splice(idx, 1); // Es necesario eliminar la charla una vez se reorganiza para que no se vuelva a agregar
                 salirCiclo = true;
-                // return ; // Deberia salir del forEach
             }
         }
 
@@ -195,15 +193,13 @@ function preEventOrganize(sesionesParam, idxParam, tiempoActualParam, sesionPara
 }
 
 // Agrega evento de LUNCH
-function addLunch(tiempoActual, sesionAM) {
-    sesionAM.push({ titulo: 'LUNCH', duracion: '60 minutos', horaInicio: '12:00 PM' });
-    console.log(sesionAM)
+function addLunch(sesionAM) {
+    sesionAM.push({ titulo: 'LUNCH', duracion: '60 minutos', horaInicio: '12:00 PM' });    
 }
 
 // Agrega evento de SOCIAL EVENT
 function addSocialEvent(tiempoActual, sesionPM) {
     sesionPM.push({ titulo: 'SOCIAL EVENT', duracion: '', horaInicio: minutesToTime(tiempoActual) });
-    console.log(sesionPM)
 }
 
 // Función para obtener los minutos sobrantes de horas no en punto
@@ -225,9 +221,10 @@ function renderConferencias(tematicas) {
     conferenciasTabla.innerHTML = '';
     
     Object.keys(tematicas).forEach(tematica => {
-        console.log(tematica);
+        const separador = document.createElement('hr');
         const tituloTematica = document.createElement('h2');
-        tituloTematica.textContent = "Tematica "+(+tematica+1);
+        tituloTematica.textContent = "Temática "+(+tematica+1);
+        conferenciasTabla.appendChild(separador);
         conferenciasTabla.appendChild(tituloTematica);
 
         ['AM', 'PM'].forEach(tipoSesion => {

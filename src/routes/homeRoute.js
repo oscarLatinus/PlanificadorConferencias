@@ -10,7 +10,7 @@ router.get('/home', (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-  res.render('aboutView', { title: 'Acerca de nosotros' });
+  res.render('aboutView', { title: 'About' });
 });
 
 module.exports = router;

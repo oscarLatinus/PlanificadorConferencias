@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-    background-color: #343a40; /* Color de fondo oscuro similar a Bootstrap */
+    background-color: #343a40; /* Color de fondo oscuro*/
     color: white;
     position: fixed; /* Hace que la barra de navegación sea fija */
     width: 100%; /* Ocupa todo el ancho de la pantalla */
@@ -52,7 +52,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #495057; /* Color de fondo al pasar el cursor, similar a Bootstrap */
+    background-color: #495057; /* Color de fondo al pasar el cursor*/
     color: #ffffff; /* Color del texto al pasar el cursor */
     border-radius: 4px; /* Esquinas redondeadas */
 }
