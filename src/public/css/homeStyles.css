@@ -1,0 +1,9 @@
+#uploadForm {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    padding: 20px; /* Espacio alrededor del formulario */
+    border: 1px solid #ccc; /* Borde del formulario */
+    border-radius: 5px; /* Borde redondeado */
+    text-align: center; /* Alinear contenido al centro */
+}
+

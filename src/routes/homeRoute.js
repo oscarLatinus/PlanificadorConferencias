@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/home', (req, res) => {
-  res.render('homeView', { title: 'Inicio' });
+  res.render('homeView', { title: 'Inicio'});
 });
 
 router.get('/about', (req, res) => {

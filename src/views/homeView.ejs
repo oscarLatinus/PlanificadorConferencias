@@ -1,5 +1,15 @@
 <%- include('partials/headerView') %>
 <link rel="stylesheet" href="/css/homeStyles.css">
 <h1>Planificador de conferencias</h1>
-<p>This is the home page content.</p>
+<!-- Formulario para subir archivo -->
+<h3>Seleccione el archivo de entrada</h3>
+<form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="fileInput" name="file" accept=".txt" onchange="parseFile()"><br>
+</form>
+<br>
+<!-- Tabla de conferencias -->
+<div id="conferenciasTabla">
+    <!-- Aquí se mostrarán los resultados -->
+</div>
+<script src="/js/scripts.js"></script>
 <%- include('partials/footerView') %>
